@@ -1,0 +1,96 @@
+.tabs {
+    display: flex;
+    gap: 24px;
+    align-items: flex-end;
+    padding: 12px 0;
+    margin: 8px 0 24px;
+    border-bottom: 2px solid #111;
+}
+
+.tab {
+    text-decoration: none;
+    font-weight: 800;
+    color: #111;
+    padding-bottom: 8px;
+}
+
+.tab.is-active {
+    color: #ef4444;
+}
+
+.items-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.item-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.item-link {
+    display: block;
+    color: #111;
+    text-decoration: none;
+}
+
+.thumb {
+    position: relative;
+    aspect-ratio: 1/1;
+    background: #f7f7f7;
+}
+
+.thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.no-image {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+
+    font-size: 12px;
+}
+
+/* 左上 Sold バッジ */
+.badge-sold {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: #111;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 9999px;
+}
+
+.title {
+    position: absolute;
+    left: 8px;
+    bottom: 8px;
+    max-width: calc(100% - 16px);
+    background: rgba(255, 255, 255, .9);
+    color: #111;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pager {
+    margin: 16px 0;
+}

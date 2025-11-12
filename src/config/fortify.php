@@ -15,6 +15,7 @@ return [
     | guards that is already present in your "auth" configuration file.
     |
     */
+     
 
     'guard' => 'web',
 
@@ -28,6 +29,8 @@ return [
     | of your password brokers setup in your "auth" configuration file.
     |
     */
+
+
 
     'passwords' => 'users',
 
@@ -155,6 +158,7 @@ return [
             'confirmPassword' => true,
             // 'window' => 0,
         ]),
+        
     ],
 
 ];
