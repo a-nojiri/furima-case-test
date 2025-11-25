@@ -39,8 +39,8 @@
  ・Laravel　Fortify
 
  ## テストユーザー
-- Email: test@example.com
-- Password: password123
+- Email: buyer@example.com
+- Password: password
 
 
  ## ER図

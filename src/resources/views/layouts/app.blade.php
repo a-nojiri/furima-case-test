@@ -17,12 +17,16 @@
              width="300" height="40" loading="lazy" style="display:block;">
       </a>
 
-      <div style="
-        position:absolute; left:50%; top:50%; transform:translate(-50%, -50%);
-        width:100%; max-width:560px; padding:0 12px; box-sizing:border-box; 
-        z-index:1;
-      ">
+      <div class="header-search-wrap" style="
+              position:absolute; left:50%; top:50%; transform:translate(-50%, -50%);
+              width:100%; max-width:560px; padding:0 12px; box-sizing:border-box; 
+              z-index:1;">
+              
         <form action="{{ url('/') }}" method="get" style="display:flex; width:100%;">
+          @if(request('tab') === 'mylist')
+            <input type="hidden" name="tab" value="mylist">
+          @endif
+          
           <input type="text" name="q" placeholder="なにをお探しですか？"
                  style="flex:1; height:32px; padding:6px 10px; border:0; border-radius:4px; background:#fff; color:#111; font-size:14px;">
         </form>

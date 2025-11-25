@@ -8,6 +8,7 @@ use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class User extends Authenticatable
 {
@@ -58,6 +59,12 @@ class User extends Authenticatable
         return $this->hasMany(Like::class);
     }
 
+     public function likedItems()
+    {
+        return $this->belongsToMany(Item::class, 'likes')
+                    ->withTimestamps();
+    }
+
     public function comments(): HasMany
     {
         return $this->hasMany(Comment::class);
@@ -73,4 +80,13 @@ class User extends Authenticatable
         return $this->hasMany(Address::class);
     }
 
+    public function purchasedItems(): BelongsToMany
+    {
+        return $this->belongsToMany(Item::class, 'orders')
+                    ->withTimestamps();
+    }
+    public function sellingItems(): HasMany
+    {
+        return $this->hasMany(Item::class);
+    }
 }    

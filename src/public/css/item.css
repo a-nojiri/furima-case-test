@@ -10,8 +10,9 @@
 .tab {
     text-decoration: none;
     font-weight: 800;
-    color: #111;
+    font-size: 14px;
     padding-bottom: 8px;
+    color: #111;
 }
 
 .tab.is-active {
@@ -42,8 +43,9 @@
 
 .thumb {
     position: relative;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1 / 1;
     background: #f7f7f7;
+    margin: 0;
 }
 
 .thumb img {
@@ -60,11 +62,9 @@
     align-items: center;
     justify-content: center;
     color: #666;
-
     font-size: 12px;
 }
 
-/* 左上 Sold バッジ */
 .badge-sold {
     position: absolute;
     top: 8px;
@@ -76,21 +76,41 @@
     border-radius: 9999px;
 }
 
-.title {
-    position: absolute;
-    left: 8px;
-    bottom: 8px;
-    max-width: calc(100% - 16px);
-    background: rgba(255, 255, 255, .9);
-    color: #111;
+.item-name {
     font-size: 12px;
-    padding: 4px 8px;
-    border-radius: 8px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    padding: 6px 8px;
 }
 
 .pager {
     margin: 16px 0;
+}
+
+
+@media (min-width: 1400px) and (max-width: 1540px) {
+    .items-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 28px;
+    }
+
+    .item-card {
+        border-radius: 14px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 850px) {
+    .items-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .item-card {
+        border-radius: 10px;
+    }
+
+    .item-name {
+        font-size: 11px;
+    }
+
+    .header-search-wrap {
+        max-width: 200px;
+    }
 }
